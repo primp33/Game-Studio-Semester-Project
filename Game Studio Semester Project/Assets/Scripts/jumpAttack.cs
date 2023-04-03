@@ -15,6 +15,13 @@ public class jumpAttack : MonoBehaviour
     private bool checkingGround;
     private bool checkingWall;
 
+    [Header("For JumpAttacking")]
+    [SerializeField] float jumpHeight;
+    [SerializeField] Transform player;
+    [SerializeField] Transform groundCheck;
+    [SerializeField] Vector2 boxSize;
+    private bool isGrounded;
+
     [Header("Other")]
     private Rigidbody2D enemyRB;
     void Start()
