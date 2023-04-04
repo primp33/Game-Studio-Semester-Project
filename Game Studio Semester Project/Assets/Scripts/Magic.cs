@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Magic : MonoBehaviour
 {
-    public Transform lightMagic;
     public GameObject lightballPrefab;
 
     void Update()
@@ -17,7 +16,7 @@ public class Magic : MonoBehaviour
     }
     void Spell()
     {
-        Instantiate(lightballPrefab, lightMagic.position, lightMagic.rotation);
+        Instantiate(lightballPrefab, gameObject.transform.position, gameObject.transform.rotation);
     }
 }
 
