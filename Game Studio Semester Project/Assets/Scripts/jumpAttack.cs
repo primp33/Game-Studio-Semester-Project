@@ -22,11 +22,18 @@ public class jumpAttack : MonoBehaviour
     [SerializeField] Vector2 boxSize;
     private bool isGrounded;
 
+    [Header("For SeeingPlayer")]
+    [SerializeField] Vector2 lineOfSite;
+    [SerializeField] LayerMask playerLayer;
+    private bool canSeePlayer;
+
     [Header("Other")]
+    private Animator enemyAnim;
     private Rigidbody2D enemyRB;
     void Start()
     {
-        enemyRB = GetComponent<Rigidbody2D>();
+        enemyRB = GetComponent<Rigidbody2D>(); 
+        enemyAnim = GetComponent<Animator>();
     }
 
 
@@ -34,7 +41,15 @@ public class jumpAttack : MonoBehaviour
     {
         checkingGround = Physics2D.OverlapCircle(groundCheckPoint.position, circleRadius, groundLayer);
         checkingWall = Physics2D.OverlapCircle(wallCheckPoint.position, circleRadius, groundLayer);
-        Petrolling();
+        isGrounded = Physics2D.OverlapBox(groundCheck.position, boxSize, 0, groundLayer);
+        canSeePlayer = Physics2D.OverlapBox(transform.position, lineOfSite, 0, playerLayer);
+        AnimationController();
+        if (!canSeePlayer && isGrounded)
+        {
+            Petrolling();
+        }
+        
+        
     }
 
     void Petrolling()
@@ -53,6 +68,30 @@ public class jumpAttack : MonoBehaviour
         enemyRB.velocity = new Vector2(moveSpeed * moveDirection, enemyRB.velocity.y);
     }
 
+    void JumpAttack()
+    {
+        float distanceFromPlayer = player.position.x - transform.position.x;
+
+        if (isGrounded)
+        {
+            enemyRB.AddForce(new Vector2(distanceFromPlayer, jumpHeight), ForceMode2D.Impulse);
+        }
+    }
+
+    void FlipTowardsPlayer()
+    {
+        float playerPos = player.transform.position.x;
+        float playerPosition = playerPos - transform.position.x;
+        if (playerPosition<0 && facingRight)
+        {
+            Flip();
+        }
+        else if (playerPosition>0 && !facingRight)
+        {
+            Flip();
+        }
+    }
+
     void Flip()
     {
         moveDirection *= -1;
@@ -60,10 +99,22 @@ public class jumpAttack : MonoBehaviour
         transform.Rotate(0, 180, 0);
     }
 
+    void AnimationController()
+    {
+        enemyAnim.SetBool("canSeePlayer", canSeePlayer);
+        enemyAnim.SetBool("isGrounded", isGrounded);
+    }
+
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.blue;
         Gizmos.DrawWireSphere(groundCheckPoint.position, circleRadius);
         Gizmos.DrawWireSphere(wallCheckPoint.position, circleRadius);
+
+        Gizmos.color = Color.green;
+        Gizmos.DrawCube(groundCheck.position, boxSize);
+
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireCube(transform.position, lineOfSite);
     }
 }
