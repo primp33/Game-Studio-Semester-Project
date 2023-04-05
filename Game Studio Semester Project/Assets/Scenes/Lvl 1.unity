@@ -130,6 +130,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1532259923}
     m_Modifications:
+    - target: {fileID: 663843240, guid: 964b484046c8f604da8f59b2eacb7b0c, type: 3}
+      propertyPath: jumpHeight
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 3519238518929920009, guid: 964b484046c8f604da8f59b2eacb7b0c, type: 3}
       propertyPath: m_Layer
       value: 6
@@ -181,6 +185,10 @@ PrefabInstance:
     - target: {fileID: 3519238519762854789, guid: 964b484046c8f604da8f59b2eacb7b0c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3519238519762854790, guid: 964b484046c8f604da8f59b2eacb7b0c, type: 3}
+      propertyPath: m_Constraints
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3519238519762854811, guid: 964b484046c8f604da8f59b2eacb7b0c, type: 3}
       propertyPath: m_Name
@@ -572,6 +580,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1532259923}
     m_Modifications:
+    - target: {fileID: 663843240, guid: 964b484046c8f604da8f59b2eacb7b0c, type: 3}
+      propertyPath: jumpHeight
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 3519238518929920009, guid: 964b484046c8f604da8f59b2eacb7b0c, type: 3}
       propertyPath: m_Layer
       value: 6
@@ -624,6 +636,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3519238519762854790, guid: 964b484046c8f604da8f59b2eacb7b0c, type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 3519238519762854811, guid: 964b484046c8f604da8f59b2eacb7b0c, type: 3}
       propertyPath: m_Name
       value: Slime Variant (1)
@@ -649,6 +665,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1532259923}
     m_Modifications:
+    - target: {fileID: 663843240, guid: 964b484046c8f604da8f59b2eacb7b0c, type: 3}
+      propertyPath: jumpHeight
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 3519238518929920009, guid: 964b484046c8f604da8f59b2eacb7b0c, type: 3}
       propertyPath: m_Layer
       value: 6
@@ -704,6 +724,18 @@ PrefabInstance:
     - target: {fileID: 3519238519762854789, guid: 964b484046c8f604da8f59b2eacb7b0c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3519238519762854790, guid: 964b484046c8f604da8f59b2eacb7b0c, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3519238519762854790, guid: 964b484046c8f604da8f59b2eacb7b0c, type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3519238519762854791, guid: 964b484046c8f604da8f59b2eacb7b0c, type: 3}
+      propertyPath: m_Material
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3519238519762854811, guid: 964b484046c8f604da8f59b2eacb7b0c, type: 3}
       propertyPath: m_Name
@@ -1102,9 +1134,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1907342427, guid: 2c6951e6aeb318b40a435bf5a3cb88a5, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6647001767597804294, guid: 2c6951e6aeb318b40a435bf5a3cb88a5, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 6647001767597804295, guid: 2c6951e6aeb318b40a435bf5a3cb88a5, type: 3}
+      propertyPath: m_Constraints
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6647001767597804298, guid: 2c6951e6aeb318b40a435bf5a3cb88a5, type: 3}
       propertyPath: m_RootOrder

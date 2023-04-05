@@ -80,7 +80,8 @@ public class jumpAttack : MonoBehaviour
 
     void FlipTowardsPlayer()
     {
-        float playerPosition = player.position.x - transform.position.x;
+        float playerPos = player.transform.position.x;
+        float playerPosition = playerPos - transform.position.x;
         if (playerPosition<0 && facingRight)
         {
             Flip();
