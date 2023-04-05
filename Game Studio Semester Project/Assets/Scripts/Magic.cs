@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Magic : MonoBehaviour
 {
-    public Transform lightMagic;
     public GameObject lightballPrefab;
+    private GameObject go;
 
     void Update()
     {
@@ -17,7 +17,15 @@ public class Magic : MonoBehaviour
     }
     void Spell()
     {
-        Instantiate(lightballPrefab, lightMagic.position, lightMagic.rotation);
+<<<<<<< HEAD
+        go = Instantiate(lightballPrefab, lightMagic.position, lightMagic.rotation);
+    }
+    private void OnBecameInvisible()
+    {
+        Destroy(go);
+=======
+        Instantiate(lightballPrefab, gameObject.transform.position, gameObject.transform.rotation);
+>>>>>>> 268c0c40a10535beb43bb79ad253d9eec49f9462
     }
 }
 
