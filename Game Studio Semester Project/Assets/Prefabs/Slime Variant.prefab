@@ -92,7 +92,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3113340604362991088, guid: 7446573012b539f49a03b69f4a9b5593, type: 3}
       propertyPath: m_TagString
-      value: Player
+      value: enemy
       objectReference: {fileID: 0}
     - target: {fileID: 3113340604587546205, guid: 7446573012b539f49a03b69f4a9b5593, type: 3}
       propertyPath: m_LocalPosition.y

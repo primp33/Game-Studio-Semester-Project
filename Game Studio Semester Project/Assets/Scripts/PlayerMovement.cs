@@ -7,14 +7,17 @@ public class PlayerMovement : MonoBehaviour
 {
     private Vector3 movement;
     private Rigidbody2D rb;
-    public float speed = 10.0f;
+    public float speed = 5.0f;
     public float jumpForce = 500.0f;
     private bool isGrounded;
+    private Collider2D collide;
+    public Animator animAttack;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        collide = GetComponent<Collider2D>();
     }
 
     // Update is called once per frame
@@ -36,6 +39,21 @@ public class PlayerMovement : MonoBehaviour
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             Time.timeScale = 1;
+        }
+
+        //hide function
+        if (Input.GetKeyDown(KeyCode.DownArrow))
+        {
+            collide.enabled = false;
+            rb.constraints = RigidbodyConstraints2D.FreezePosition;
+            speed = 0;
+        }
+        if (Input.GetKeyUp(KeyCode.DownArrow))
+        {
+            collide.enabled = true;
+            rb.constraints = RigidbodyConstraints2D.None;
+            rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+            speed = 5;
         }
 
         //float moveHorizontal = Input.GetAxis("Horizontal");
@@ -60,12 +78,24 @@ public class PlayerMovement : MonoBehaviour
         {
             isGrounded = true;
         }
+        //if (collision.gameObject.CompareTag("recharge"))
+        //{
+        //    animAttack.Play("Base Layer.Spirit");
+        //}
     }
     void OnCollisionExit2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Map"))
         {
             isGrounded = false;
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("recharge"))
+        {
+            animAttack.Play("Base Layer.Spirit");
         }
     }
 }
