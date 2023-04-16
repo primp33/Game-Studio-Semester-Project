@@ -15,7 +15,7 @@ public class camera : MonoBehaviour
     {
         player = GameObject.FindWithTag("Player");
         camPos = transform.position;
-        begin = player.transform.position;
+        begin = transform.position;
     }
 
     // Update is called once per frame
