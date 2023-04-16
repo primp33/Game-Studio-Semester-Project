@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1120654581}
   - component: {fileID: 1120654582}
   - component: {fileID: 1120654583}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Spotlight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -115,7 +115,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1128922949}
   - component: {fileID: 1128922950}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: witch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -198,7 +198,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1348109388}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: lightMagic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -233,7 +233,7 @@ GameObject:
   - component: {fileID: 6647001767597804295}
   - component: {fileID: 1907342427}
   - component: {fileID: 1395946637541841293}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -331,7 +331,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 0
 --- !u!61 &1907342427
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -386,7 +386,7 @@ GameObject:
   - component: {fileID: 6647001767910862553}
   - component: {fileID: 432209666822176376}
   - component: {fileID: 719031861}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Spirit Orb
   m_TagString: Untagged
   m_Icon: {fileID: 0}
