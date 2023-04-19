@@ -42,7 +42,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         //hide function
-        if (Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S))
+        if ((Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S)) && isGrounded== true)
         {
             collide.enabled = false;
             rb.constraints = RigidbodyConstraints2D.FreezePosition;
