@@ -26,12 +26,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1120654580}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.1, y: -5.58, z: 0}
-  m_LocalScale: {x: 14.29061, y: 6.952787, z: 13.25129}
+  m_LocalPosition: {x: 3.2, y: -10.5, z: 0}
+  m_LocalScale: {x: 11.860326, y: 11.860326, z: 11.860326}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6647001767597804298}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1120654582
 SpriteRenderer:
@@ -105,37 +105,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
---- !u!1 &1348109387
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1348109388}
-  m_Layer: 7
-  m_Name: lightMagic
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1348109388
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1348109387}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.94, y: 1, z: 0}
-  m_LocalScale: {x: 0.51386, y: 0.51386, z: 0.51386}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 6647001767597804298}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6647001767597804294
 GameObject:
   m_ObjectHideFlags: 0
@@ -149,6 +118,7 @@ GameObject:
   - component: {fileID: 6647001767597804295}
   - component: {fileID: 1907342427}
   - component: {fileID: 1395946637541841293}
+  - component: {fileID: 3920257005316409865}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -165,11 +135,10 @@ Transform:
   m_GameObject: {fileID: 6647001767597804294}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -8.98, y: -2.56, z: 0}
-  m_LocalScale: {x: 0.57450825, y: 1.0846174, z: 0.6380102}
+  m_LocalScale: {x: 0.40151906, y: 0.40151906, z: 0.40151906}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6647001767910862552}
-  - {fileID: 1348109388}
   - {fileID: 1120654581}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -246,7 +215,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &1907342427
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -260,7 +229,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.66549736, y: -0.7709949}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -271,7 +240,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.133087, y: 2.9628482}
   m_EdgeRadius: 0
 --- !u!114 &1395946637541841293
 MonoBehaviour:
@@ -286,8 +255,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  jumpForce: 400
-  animAttack: {fileID: 0}
+  jumpForce: 350
+  animAttack: {fileID: 719031861}
+--- !u!114 &3920257005316409865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6647001767597804294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d9f6bbc337d56e419ed20cdc6393d6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  currentHealth: 0
+  healthBar: {fileID: 0}
 --- !u!1 &6647001767910862551
 GameObject:
   m_ObjectHideFlags: 0
@@ -317,8 +301,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6647001767910862551}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.9839, y: 0.92017, z: 0}
-  m_LocalScale: {x: 0.25491375, y: 0.13591537, z: 0.23637456}
+  m_LocalPosition: {x: 1.39, y: 0.96, z: 0}
+  m_LocalScale: {x: 0.3636, y: 0.3636, z: 0.3636}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6647001767597804298}
