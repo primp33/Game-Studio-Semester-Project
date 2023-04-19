@@ -42,13 +42,13 @@ public class PlayerMovement : MonoBehaviour
         }
 
         //hide function
-        if (Input.GetKeyDown(KeyCode.DownArrow))
+        if (Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S))
         {
             collide.enabled = false;
             rb.constraints = RigidbodyConstraints2D.FreezePosition;
             speed = 0;
         }
-        if (Input.GetKeyUp(KeyCode.DownArrow))
+        if (Input.GetKeyUp(KeyCode.DownArrow) || Input.GetKeyUp(KeyCode.S))
         {
             collide.enabled = true;
             rb.constraints = RigidbodyConstraints2D.None;
@@ -65,7 +65,7 @@ public class PlayerMovement : MonoBehaviour
         //    Vector2 vel = rb.velocity;
         //}
 
-        if (Input.GetKeyDown(KeyCode.UpArrow) && isGrounded == true)
+        if ((Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W)) && isGrounded == true)
         {
             rb.AddForce(new Vector3(0.0f, jumpForce, 0.0f));
             isGrounded = false;

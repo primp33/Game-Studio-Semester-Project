@@ -7,7 +7,7 @@ public class camera : MonoBehaviour
 {
     private GameObject player;
     private Vector3 camPos;
-    public float xEnd;
+    public float xEnd = 51;
     private Vector3 begin;
     private Vector3 begin1;
 
@@ -30,8 +30,8 @@ public class camera : MonoBehaviour
             transform.position = new Vector3(player.transform.position.x, player.transform.position.y+1, transform.position.z);
         }
 
-        if (player.transform.position.y < -20)
-            {
+        if ((player.transform.position.y < -20) || (player.transform.position.x < -7))
+        {
                 player.transform.position = begin;
             transform.position = begin1;
             }
