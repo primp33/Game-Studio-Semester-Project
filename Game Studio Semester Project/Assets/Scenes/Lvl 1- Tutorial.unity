@@ -974,11 +974,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1d91e7ac060352e4997b5721d674d983, type: 3}
---- !u!61 &133168157 stripped
-BoxCollider2D:
-  m_CorrespondingSourceObject: {fileID: 133168157, guid: 1d91e7ac060352e4997b5721d674d983, type: 3}
-  m_PrefabInstance: {fileID: 133168155}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &271221192
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1101,6 +1096,11 @@ MonoBehaviour:
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6647001767597804294, guid: 2c6951e6aeb318b40a435bf5a3cb88a5, type: 3}
   m_PrefabInstance: {fileID: 14285473}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &621558765 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8235864229375798109, guid: 1d91e7ac060352e4997b5721d674d983, type: 3}
+  m_PrefabInstance: {fileID: 133168155}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &974047756
 PrefabInstance:
@@ -1319,11 +1319,15 @@ PrefabInstance:
     - target: {fileID: -4732657796005625829, guid: 583b07b1c245b5a4e8e2546041e4f17e, type: 3}
       propertyPath: door
       value: 
-      objectReference: {fileID: 133168157}
+      objectReference: {fileID: 621558765}
     - target: {fileID: -4732657796005625829, guid: 583b07b1c245b5a4e8e2546041e4f17e, type: 3}
       propertyPath: hide
       value: 
       objectReference: {fileID: 3564490277571077815}
+    - target: {fileID: -4732657796005625829, guid: 583b07b1c245b5a4e8e2546041e4f17e, type: 3}
+      propertyPath: open
+      value: 
+      objectReference: {fileID: 21300000, guid: db34c885ae32f7b4bb849546de12255e, type: 3}
     - target: {fileID: 2538277056396659351, guid: 583b07b1c245b5a4e8e2546041e4f17e, type: 3}
       propertyPath: m_RootOrder
       value: 5
