@@ -19,9 +19,15 @@ public class PlayerHealth : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
-		if (Input.GetKeyDown(KeyCode.Space))
+		
+	}
+
+	void OnCollisionEnter2D(Collision2D collision)
+    {
+		if (collision.gameObject.tag == "enemy")
 		{
 			TakeDamage(20);
+
 		}
 	}
 
