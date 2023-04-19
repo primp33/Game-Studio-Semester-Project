@@ -9,13 +9,15 @@ public class camera : MonoBehaviour
     private Vector3 camPos;
     public float xEnd;
     private Vector3 begin;
+    private Vector3 begin1;
 
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindWithTag("Player");
         camPos = transform.position;
-        begin = transform.position;
+        begin = player.transform.position;
+        begin1 = transform.position;
     }
 
     // Update is called once per frame
@@ -31,6 +33,7 @@ public class camera : MonoBehaviour
         if (player.transform.position.y < -20)
             {
                 player.transform.position = begin;
+            transform.position = begin1;
             }
         if (player.transform.position.x > xEnd)
         {

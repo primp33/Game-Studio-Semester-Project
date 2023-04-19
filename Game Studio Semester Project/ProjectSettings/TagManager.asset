@@ -7,6 +7,7 @@ TagManager:
   - Map
   - enemy
   - recharge
+  - key
   layers:
   - Default
   - TransparentFX
