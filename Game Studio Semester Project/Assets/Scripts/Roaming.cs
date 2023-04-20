@@ -9,11 +9,14 @@ public class Roaming : MonoBehaviour
     public float start;
     public float end;
     public Vector3 begin;
+    public GameObject cam;
+    private Vector3 campos;
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         rb.velocity = transform.right * speed;
+        campos = cam.transform.position;
     }
 
     // Update is called once per frame
@@ -34,6 +37,7 @@ public class Roaming : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             collision.gameObject.transform.position = begin;
+            cam.transform.position = campos;
         }
     }
 }
