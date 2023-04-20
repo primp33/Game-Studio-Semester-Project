@@ -6,12 +6,12 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     public GameObject player;
-    private Vector3 movement;
+    private Vector3 movement = Vector3.right;
     private float speed = 1;
-    private float range = 2;
+    private float range = 3;
     private Animator animator;
     private bool hit = false;
-    //private bool isGrounded;
+    public bool move = true;
 
     private void OnBecameVisible()
     {
@@ -30,7 +30,9 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (((hit == false) && (Mathf.Abs(player.transform.position.x - transform.position.x) < 20) && (Mathf.Abs(player.transform.position.y - transform.position.y) < 4)))
+        if (move == true)
+        {
+            if (((hit == false) && (Mathf.Abs(player.transform.position.x - transform.position.x) < 20) && (Mathf.Abs(player.transform.position.y - transform.position.y) < 4)))
             {
                 transform.position += movement * speed * Time.deltaTime;
             }
@@ -38,18 +40,22 @@ public class Enemy : MonoBehaviour
             {
                 transform.position += movement * -speed * Time.deltaTime;
             }
+        }
 
-            if (player.transform.position.x > transform.position.x)
+            if ((movement == Vector3.left)&&(player.transform.position.x > transform.position.x))
             {
                 goRight();
+                move = true;
             }
-            if (player.transform.position.x < transform.position.x)
+            if ((movement == Vector3.right)&&(player.transform.position.x < transform.position.x))
             {
                 goLeft();
+                move = true;
             }
             if ((Mathf.Abs(player.transform.position.x - transform.position.x) < range) && (Mathf.Abs(player.transform.position.y - transform.position.y) < 1))
             {
                 animator.SetBool("Near Player", true);
+            //move = true;
             }
             if (Mathf.Abs(player.transform.position.x - transform.position.x) > range)
             {
@@ -65,9 +71,19 @@ public class Enemy : MonoBehaviour
                 animator.Play("Base Layer.Spin2");
                 hit = true;
             }
+        if (collision.gameObject.CompareTag("Map"))
+        {
+            move = true;
         }
-
-        private void goRight()
+        }
+    void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Map"))
+        {
+            move = false;
+        }
+    }
+    private void goRight()
         {
             transform.localRotation = Quaternion.Euler(0, 0, 0);
             movement = Vector3.right;

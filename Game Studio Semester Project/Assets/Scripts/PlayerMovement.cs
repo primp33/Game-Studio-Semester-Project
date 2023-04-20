@@ -47,6 +47,7 @@ public class PlayerMovement : MonoBehaviour
             collide.enabled = false;
             rb.constraints = RigidbodyConstraints2D.FreezePosition;
             speed = 0;
+            animAttack.SetBool("hide", true);
         }
         if (Input.GetKeyUp(KeyCode.DownArrow) || Input.GetKeyUp(KeyCode.S))
         {
@@ -54,16 +55,8 @@ public class PlayerMovement : MonoBehaviour
             rb.constraints = RigidbodyConstraints2D.None;
             rb.constraints = RigidbodyConstraints2D.FreezeRotation;
             speed = 5;
+            animAttack.SetBool("hide", false);
         }
-
-        //float moveHorizontal = Input.GetAxis("Horizontal");
-        //movement = new Vector3(moveHorizontal, 0.0f, 0.0f);
-        //rb.AddForce(movement * speed);
-
-        //if (Input.GetKeyUp(KeyCode.LeftArrow) || Input.GetKeyUp(KeyCode.RightArrow))
-        //{
-        //    Vector2 vel = rb.velocity;
-        //}
 
         if ((Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W)) && isGrounded == true)
         {
@@ -78,10 +71,6 @@ public class PlayerMovement : MonoBehaviour
         {
             isGrounded = true;
         }
-        //if (collision.gameObject.CompareTag("recharge"))
-        //{
-        //    animAttack.Play("Base Layer.Spirit");
-        //}
     }
     void OnCollisionExit2D(Collision2D collision)
     {
