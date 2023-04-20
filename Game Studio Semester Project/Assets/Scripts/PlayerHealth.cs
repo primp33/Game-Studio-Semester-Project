@@ -7,6 +7,7 @@ public class PlayerHealth : MonoBehaviour
 {
 	public int maxHealth = 100;
 	public int currentHealth;
+	public int damage = 20;
 
 	public HealthBar healthBar;
 
@@ -31,7 +32,7 @@ public class PlayerHealth : MonoBehaviour
     {
 		if (collision.gameObject.tag == "enemy")
 		{
-			TakeDamage(20);
+			TakeDamage(damage);
 
 		}
 	}

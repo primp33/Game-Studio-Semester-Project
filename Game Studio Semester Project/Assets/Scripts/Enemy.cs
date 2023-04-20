@@ -30,7 +30,7 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (((hit == false) && (Mathf.Abs(player.transform.position.x - transform.position.x) < 10) && (Mathf.Abs(player.transform.position.y - transform.position.y) < 4)))
+        if (((hit == false) && (Mathf.Abs(player.transform.position.x - transform.position.x) < 20) && (Mathf.Abs(player.transform.position.y - transform.position.y) < 4)))
             {
                 transform.position += movement * speed * Time.deltaTime;
             }
