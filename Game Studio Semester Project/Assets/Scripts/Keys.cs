@@ -23,7 +23,7 @@ public class Keys : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             hide.SetActive(false);
-            this.gameObject.SetActive(false);
+            //this.gameObject.SetActive(false);
         }
     }
 }
