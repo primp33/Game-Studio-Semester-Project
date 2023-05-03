@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
     private bool isGrounded;
     private Collider2D collide;
     public Animator animAttack;
+    public GameObject cooldown;
 
     // Start is called before the first frame update
     void Start()
@@ -29,10 +30,12 @@ public class PlayerMovement : MonoBehaviour
         if (movement.x > 0)
         {
             transform.localRotation = Quaternion.Euler(0, 0, 0);
+            cooldown.transform.localRotation = Quaternion.Euler(0, 0, 20);
         }
         if (movement.x < 0)
         {
             transform.localRotation = Quaternion.Euler(0, 180, 0);
+            cooldown.transform.localRotation = Quaternion.Euler(0, 180, 20);
         }
 
         if (Input.GetKeyDown(KeyCode.R))

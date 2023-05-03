@@ -14,7 +14,7 @@ public class PlayerHealth : MonoBehaviour
 	// Start is called before the first frame update
 	void Start()
 	{
-		currentHealth = maxHealth;
+        currentHealth = maxHealth;
 		healthBar.SetMaxHealth(maxHealth);
 	}
 
@@ -30,8 +30,9 @@ public class PlayerHealth : MonoBehaviour
 
 	void OnCollisionEnter2D(Collision2D collision)
     {
-		if (collision.gameObject.tag == "enemy")
-		{
+		if ((collision.gameObject.tag == "enemy") || (collision.gameObject.name == "Roaming Enemy"))
+
+        {
 			TakeDamage(damage);
 
 		}
