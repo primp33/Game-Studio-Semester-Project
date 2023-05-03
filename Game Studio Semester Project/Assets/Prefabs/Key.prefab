@@ -96,6 +96,10 @@ GameObject:
   - component: {fileID: 149659729785496330}
   - component: {fileID: -4732657796005625829}
   - component: {fileID: -1822107579872386827}
+  - component: {fileID: 1211230751}
+  - component: {fileID: 1211230752}
+  - component: {fileID: 1211230753}
+  - component: {fileID: 1211230754}
   m_Layer: 6
   m_Name: Key
   m_TagString: key
@@ -157,10 +161,10 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1208954795
+  m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: b80a680c97d641c4db6b91cae9b59d58, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 81ed9a5c5c2d4414594db06e2881fe54, type: 3}
   m_Color: {r: 1, g: 0.83358693, b: 0.39308167, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -184,7 +188,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hide: {fileID: 0}
-  door: {fileID: 0}
   open: {fileID: 21300000, guid: db34c885ae32f7b4bb849546de12255e, type: 3}
 --- !u!58 &-1822107579872386827
 CircleCollider2D:
@@ -202,3 +205,66 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 2.5599997
+--- !u!114 &1211230751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5599099973914285151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa9886f891ca0ba47996f4b8ba4e3f5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  multiplierMax: 1.5
+--- !u!114 &1211230752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5599099973914285151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49ca0141b1528514d959fefae666fca5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeedMax: 60
+  randomize: 1
+--- !u!114 &1211230753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5599099973914285151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e16221b17c7d40f5b614eea638afc08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colors:
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 1, g: 0.6901961, b: 0.6901961, a: 1}
+  - {r: 1, g: 0.8117647, b: 0.6117647, a: 1}
+  - {r: 0.8, g: 1, b: 0.6117647, a: 1}
+  - {r: 0.6117647, g: 1, b: 0.96862745, a: 1}
+  - {r: 0.8666667, g: 0.6117647, b: 1, a: 1}
+  invisibleProbability: 0
+--- !u!114 &1211230754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5599099973914285151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99059603bb99fff40928a3ef176e23cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textbox: {fileID: 0}
+  text: {fileID: 0}
+  realtext: "Press \u2018ARROW\u2019 or \u2018A\u2019 \u2018W\u2019 \u2018S\u2019
+    \u2018D\u2019 key for character movement. Press \u2018UP\u2019 key for jump. "

@@ -5,7 +5,6 @@ using UnityEngine;
 public class Keys : MonoBehaviour
 {
     public GameObject hide;
-    public GameObject door;
     public Sprite open;
     // Start is called before the first frame update
     void Start()
@@ -24,9 +23,6 @@ public class Keys : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             hide.SetActive(false);
-            door.GetComponent<SpriteRenderer>().sprite = open;
-            door.GetComponent<SpriteRenderer>().flipX = false;
-            door.GetComponent<Collider2D>().enabled = false;
             this.gameObject.SetActive(false);
         }
     }
