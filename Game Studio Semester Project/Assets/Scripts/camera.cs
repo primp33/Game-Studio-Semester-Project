@@ -32,12 +32,8 @@ public class camera : MonoBehaviour
 
         if ((player.transform.position.y < -20) || (player.transform.position.x < -7))
         {
-                player.transform.position = begin;
             transform.position = begin1;
-            }
-        if (player.transform.position.x > xEnd)
-        {
-            this.enabled = false;
+            player.transform.position = begin;
         }
 
     }

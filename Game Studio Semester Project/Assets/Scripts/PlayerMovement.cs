@@ -13,12 +13,14 @@ public class PlayerMovement : MonoBehaviour
     private Collider2D collide;
     public Animator animAttack;
     public GameObject cooldown;
+    private Vector3 begin;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         collide = GetComponent<Collider2D>();
+        begin = transform.position;
     }
 
     // Update is called once per frame

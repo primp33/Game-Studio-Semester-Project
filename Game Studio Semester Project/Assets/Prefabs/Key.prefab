@@ -94,12 +94,10 @@ GameObject:
   m_Component:
   - component: {fileID: 2538277056396659351}
   - component: {fileID: 149659729785496330}
-  - component: {fileID: -4732657796005625829}
   - component: {fileID: -1822107579872386827}
   - component: {fileID: 1211230751}
   - component: {fileID: 1211230752}
   - component: {fileID: 1211230753}
-  - component: {fileID: 1211230754}
   m_Layer: 6
   m_Name: Key
   m_TagString: key
@@ -116,7 +114,7 @@ Transform:
   m_GameObject: {fileID: 5599099973914285151}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 9.104356, y: 7.644896, z: 0}
-  m_LocalScale: {x: 0.20396683, y: 0.18560334, z: 0.7036101}
+  m_LocalScale: {x: 0.4599656, y: 0.4185541, z: 1.5867112}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2431024409345312897}
@@ -175,20 +173,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &-4732657796005625829
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5599099973914285151}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3fca0f3a20d43d4785f4563e6971b7c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hide: {fileID: 0}
-  open: {fileID: 21300000, guid: db34c885ae32f7b4bb849546de12255e, type: 3}
 --- !u!58 &-1822107579872386827
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -199,7 +183,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -252,19 +236,3 @@ MonoBehaviour:
   - {r: 0.6117647, g: 1, b: 0.96862745, a: 1}
   - {r: 0.8666667, g: 0.6117647, b: 1, a: 1}
   invisibleProbability: 0
---- !u!114 &1211230754
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5599099973914285151}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 99059603bb99fff40928a3ef176e23cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textbox: {fileID: 0}
-  text: {fileID: 0}
-  realtext: "Press \u2018ARROW\u2019 or \u2018A\u2019 \u2018W\u2019 \u2018S\u2019
-    \u2018D\u2019 key for character movement. Press \u2018UP\u2019 key for jump. "
