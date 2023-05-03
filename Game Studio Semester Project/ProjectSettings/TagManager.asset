@@ -8,6 +8,7 @@ TagManager:
   - enemy
   - recharge
   - key
+  - healingitem
   layers:
   - Default
   - TransparentFX
