@@ -5,18 +5,20 @@ using UnityEngine;
 public class Roaming : MonoBehaviour
 {
     private Rigidbody2D rb;
-    public float speed;
-    public float start;
+    public float speed = 2;
+    private Vector3 start;
     public float end;
-    public Vector3 begin;
+    private Vector3 begin;
     public GameObject cam;
     private Vector3 campos;
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        rb.velocity = transform.right * speed;
+        rb.velocity = -transform.right * speed;
         campos = cam.transform.position;
+        start = transform.position;
+        begin = GameObject.FindWithTag("Player").transform.position;
     }
 
     // Update is called once per frame
@@ -24,11 +26,7 @@ public class Roaming : MonoBehaviour
     {
         if (transform.position.x < end)
         {
-            rb.velocity = transform.right * speed;
-        }
-        if (transform.position.x > start)
-        {
-            rb.velocity = -transform.right * speed;
+            transform.position = start;
         }
     }
 

@@ -8,7 +8,7 @@ TagManager:
   - enemy
   - recharge
   - key
-  - healingitem
+  - Health Bar
   layers:
   - Default
   - TransparentFX
@@ -48,4 +48,7 @@ TagManager:
     locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Above darkness
+    uniqueID: 3086012501
     locked: 0
