@@ -329,7 +329,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 2
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -374,7 +374,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  jumpForce: 350
+  jumpForce: 500
   animAttack: {fileID: 719031861}
   cooldown: {fileID: 2228808275080016880}
 --- !u!114 &3920257005316409865
@@ -504,7 +504,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textbox: {fileID: 0}
   text: {fileID: 0}
-  realtext: []
   key: 0
   hide:
   - {fileID: 0}
@@ -514,6 +513,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   portal: {fileID: 0}
+  realtext: []
 --- !u!1 &6647001767910862551
 GameObject:
   m_ObjectHideFlags: 0

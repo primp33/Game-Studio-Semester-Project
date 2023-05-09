@@ -27,7 +27,7 @@ public class playerStates : MonoBehaviour
 
         if (currExp>=maxExp)
         {
-            currExp = currExp - maxExp
+            currExp = currExp - maxExp;
             level += 1;
         }
     }

@@ -12,15 +12,19 @@ public class Keys : MonoBehaviour
     public int key = 0;
     public GameObject[] hide;
     public GameObject portal;
+    //public GameObject picture;
+    public Image Picture;
     public List<string> realtext = new List<string>();
+    public List<Sprite> images = new List<Sprite>();
     void Start()
     {
         portal.SetActive(false);
+        //Picture = picture.GetComponent<Image>();
     }
 
     // Update is called once per frame
     void Update()
-    {   
+    {
         if (key == hide.Length+1)
         {
             portal.SetActive(true);
@@ -31,6 +35,7 @@ public class Keys : MonoBehaviour
         if (collision.gameObject.CompareTag("key"))
         {
             text.text = realtext[key];
+            Picture.GetComponent<Image>().sprite = images[key];
             hide[key].SetActive(false);
             textbox.SetActive(true);
             //hide[key].SetActive(false);
