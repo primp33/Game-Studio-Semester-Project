@@ -3190,23 +3190,33 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8632431348325945439, guid: 2c6951e6aeb318b40a435bf5a3cb88a5, type: 3}
       propertyPath: realtext.Array.data[0]
-      value: 1
+      value: When the evil dragon was first born, it was born in the expectation
+        of its parents, and it was also very happy in its childhood.
       objectReference: {fileID: 0}
     - target: {fileID: 8632431348325945439, guid: 2c6951e6aeb318b40a435bf5a3cb88a5, type: 3}
       propertyPath: realtext.Array.data[1]
-      value: 2
+      value: It lives with its parents in a remote valley away from human gathering
+        places. Its parents forbid it to have any contact with humans, and forbid
+        it to care about the news of the outside world.
       objectReference: {fileID: 0}
     - target: {fileID: 8632431348325945439, guid: 2c6951e6aeb318b40a435bf5a3cb88a5, type: 3}
       propertyPath: realtext.Array.data[2]
-      value: 3
+      value: Its parents clearly understand that if humans know the existence of
+        dragons, their own value, such as scales and dragon horns, will only attract
+        humans who want to slaughter them out of desire.
       objectReference: {fileID: 0}
     - target: {fileID: 8632431348325945439, guid: 2c6951e6aeb318b40a435bf5a3cb88a5, type: 3}
       propertyPath: realtext.Array.data[3]
-      value: 4
+      value: However, it stayed in the same place for too long and was too boring,
+        and it became interested in learning about the outside world. So, it sneaks
+        out of the valley almost every once in a while to observe the outside world.
       objectReference: {fileID: 0}
     - target: {fileID: 8632431348325945439, guid: 2c6951e6aeb318b40a435bf5a3cb88a5, type: 3}
       propertyPath: realtext.Array.data[4]
-      value: 5
+      value: At the beginning, it is not used to it, and it is also afraid that the
+        parents will find out and punish it. But after sneaking out several times
+        without being discovered, it gradually dared to stay away from the valley
+        more and more.
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2c6951e6aeb318b40a435bf5a3cb88a5, type: 3}
@@ -3217,6 +3227,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1001225609261949980, guid: ca57e0638278abb4fb9f21409b41c412, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 736.256
+      objectReference: {fileID: 0}
+    - target: {fileID: 1001225609261949980, guid: ca57e0638278abb4fb9f21409b41c412, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 96.971
+      objectReference: {fileID: 0}
+    - target: {fileID: 1001225609261949980, guid: ca57e0638278abb4fb9f21409b41c412, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.638
+      objectReference: {fileID: 0}
+    - target: {fileID: 1001225609261949980, guid: ca57e0638278abb4fb9f21409b41c412, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 5.427
+      objectReference: {fileID: 0}
+    - target: {fileID: 1001225609819807743, guid: ca57e0638278abb4fb9f21409b41c412, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5540405866693872392, guid: ca57e0638278abb4fb9f21409b41c412, type: 3}
       propertyPath: m_IsActive
       value: 0
