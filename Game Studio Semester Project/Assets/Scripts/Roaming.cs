@@ -24,7 +24,7 @@ public class Roaming : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (transform.position.x < end)
+        if (transform.position.x <= end)
         {
             transform.position = start;
         }

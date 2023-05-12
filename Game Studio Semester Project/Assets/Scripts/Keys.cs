@@ -25,7 +25,7 @@ public class Keys : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (key == hide.Length+1)
+        if (key == hide.Length)
         {
             portal.SetActive(true);
         }
