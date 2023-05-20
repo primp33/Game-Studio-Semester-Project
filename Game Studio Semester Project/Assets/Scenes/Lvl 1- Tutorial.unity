@@ -4635,7 +4635,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textbox: {fileID: 778953990}
   realtext: This enemy's laser will send you back to the start. Press the down key
-    to turn off your light and hide from enemies.
+    to turn off your light and hide from enemies. Hiding without full energy will
+    restart your cooldown time.
   player: {fileID: 1070621072}
 --- !u!224 &8571991777293272906
 RectTransform:
