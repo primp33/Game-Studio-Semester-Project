@@ -1,15 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Magic : MonoBehaviour
 {
     public GameObject lightballPrefab;
     private Animator animator;
+    public GameObject dontdestroy;
+    private levelSystem levelsystem;
 
     private void Start()
     {
         animator = GetComponent<Animator>();
+        dontdestroy = GameObject.Find("DontDestroy");
+        levelsystem = dontdestroy.GetComponent<levelSystem>();
     }
     void Update()
     {
@@ -29,11 +34,12 @@ public class Magic : MonoBehaviour
         if (collision.gameObject.CompareTag("enemy"))
         {
             collision.gameObject.SetActive(false);
+            levelsystem.currentXp += 20;
         }
     }
-    void Spell()
-    {
-        Instantiate(lightballPrefab, gameObject.transform.position, gameObject.transform.rotation);
-    }
+    //void Spell()
+    //{
+    //    Instantiate(lightballPrefab, gameObject.transform.position, gameObject.transform.rotation);
+    //}
 }
 

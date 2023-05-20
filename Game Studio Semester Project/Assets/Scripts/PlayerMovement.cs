@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.PlasticSCM.Editor.WebApi;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -15,9 +17,14 @@ public class PlayerMovement : MonoBehaviour
     public GameObject cooldown;
     private Vector3 begin;
 
+    public GameObject dontdestroy;
+    private levelSystem levelsystem;
+
     // Start is called before the first frame update
     void Start()
     {
+        dontdestroy = GameObject.Find("DontDestroy");
+        levelsystem = dontdestroy.GetComponent<levelSystem>();
         rb = GetComponent<Rigidbody2D>();
         collide = GetComponent<Collider2D>();
         begin = transform.position;
@@ -68,6 +75,16 @@ public class PlayerMovement : MonoBehaviour
             rb.AddForce(new Vector3(0.0f, jumpForce, 0.0f));
             isGrounded = false;
         }
+        
+        //cooldown speed by level
+        if (animAttack.GetCurrentAnimatorStateInfo(0).IsName("Cooldown"))
+        {
+            animAttack.speed = 1 + (levelsystem.level/2);
+        }
+        else
+        {
+            animAttack.speed = 1;
+        }
 
     }
     void OnCollisionStay2D(Collision2D collision)
@@ -86,9 +103,14 @@ public class PlayerMovement : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("recharge"))
+        if (collision.gameObject.CompareTag("recharge") && animAttack.GetCurrentAnimatorStateInfo(0).IsName("Cooldown"))
         {
             animAttack.Play("Base Layer.Spirit");
+        }
+        if (collision.gameObject.CompareTag("EXP"))
+        {
+            collision.gameObject.SetActive(false);
+            levelsystem.currentXp += 40;
         }
     }
 }

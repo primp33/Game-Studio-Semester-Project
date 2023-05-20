@@ -9,19 +9,30 @@ public class PlayerHealth : MonoBehaviour
 	public int currentHealth;
 	public int damage = 20;
 	public int pluslife = 20;
+	public GameObject dontdestroy;
+	private levelSystem levelsystem;
+	private int level;
 
 	public HealthBar healthBar;
 
 	// Start is called before the first frame update
 	void Start()
 	{
+        dontdestroy = GameObject.Find("DontDestroy");
+        levelsystem = dontdestroy.GetComponent<levelSystem>();
         currentHealth = maxHealth;
-		healthBar.SetMaxHealth(maxHealth);
+        healthBar.SetMaxHealth(maxHealth);
+		level = levelsystem.level;
 	}
 
 	// Update is called once per frame
 	void Update()
 	{
+		if (!(level == levelsystem.level))
+		{
+            level = levelsystem.level;
+            maxHealth += levelsystem.level * 50;
+		}
         if (currentHealth == 0)
         {
 			SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);

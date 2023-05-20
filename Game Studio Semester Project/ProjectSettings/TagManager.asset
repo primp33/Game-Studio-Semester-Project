@@ -9,6 +9,7 @@ TagManager:
   - recharge
   - key
   - Health Bar
+  - EXP
   layers:
   - Default
   - TransparentFX

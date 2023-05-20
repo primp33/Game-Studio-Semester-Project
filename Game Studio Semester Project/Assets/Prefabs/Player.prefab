@@ -210,9 +210,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1208954795
   m_SortingLayer: 1
-  m_SortingOrder: 1
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: d3dac11eeb7651f4bb05f0b700ae5bc3, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.5176471}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -377,6 +377,7 @@ MonoBehaviour:
   jumpForce: 500
   animAttack: {fileID: 719031861}
   cooldown: {fileID: 2228808275080016880}
+  dontdestroy: {fileID: 0}
 --- !u!114 &3920257005316409865
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -393,6 +394,7 @@ MonoBehaviour:
   currentHealth: 0
   damage: 5
   pluslife: 20
+  dontdestroy: {fileID: 0}
   healthBar: {fileID: 0}
 --- !u!82 &91963856
 AudioSource:
@@ -513,7 +515,9 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   portal: {fileID: 0}
+  Picture: {fileID: 0}
   realtext: []
+  images: []
 --- !u!1 &6647001767910862551
 GameObject:
   m_ObjectHideFlags: 0
@@ -633,6 +637,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lightballPrefab: {fileID: 8486652362498587759, guid: 2a2743a7547c59f44822484dd649bab6, type: 3}
+  dontdestroy: {fileID: 0}
 --- !u!95 &719031861
 Animator:
   serializedVersion: 5
@@ -829,9 +834,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1208954795
   m_SortingLayer: 1
-  m_SortingOrder: 1
+  m_SortingOrder: 5
   m_Sprite: {fileID: -321465630, guid: 53966fe3d5cb5274c849e50004e52300, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.5176471}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
