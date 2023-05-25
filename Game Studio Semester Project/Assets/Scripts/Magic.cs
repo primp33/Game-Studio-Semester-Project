@@ -9,6 +9,7 @@ public class Magic : MonoBehaviour
     private Animator animator;
     public GameObject dontdestroy;
     private levelSystem levelsystem;
+    public Animator playeranim;
 
     private void Start()
     {
@@ -22,10 +23,12 @@ public class Magic : MonoBehaviour
         {
             //Spell();
             animator.SetBool("Space", true);
+            playeranim.SetBool("attack", true);
         }
         if (Input.GetKeyUp(KeyCode.Space))
         {
             animator.SetBool("Space", false);
+            playeranim.SetBool("attack", false);
         }
 
     }

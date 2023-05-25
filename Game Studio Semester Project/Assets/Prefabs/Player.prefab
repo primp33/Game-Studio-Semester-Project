@@ -238,6 +238,7 @@ GameObject:
   - component: {fileID: 3920257005316409865}
   - component: {fileID: 91963856}
   - component: {fileID: 8632431348325945439}
+  - component: {fileID: 3931779895068599707}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -377,6 +378,7 @@ MonoBehaviour:
   jumpForce: 500
   animAttack: {fileID: 719031861}
   cooldown: {fileID: 2228808275080016880}
+  playeranim: {fileID: 3931779895068599707}
   dontdestroy: {fileID: 0}
 --- !u!114 &3920257005316409865
 MonoBehaviour:
@@ -395,6 +397,7 @@ MonoBehaviour:
   damage: 5
   pluslife: 20
   dontdestroy: {fileID: 0}
+  playeranim: {fileID: 0}
   healthBar: {fileID: 0}
 --- !u!82 &91963856
 AudioSource:
@@ -518,6 +521,26 @@ MonoBehaviour:
   Picture: {fileID: 0}
   realtext: []
   images: []
+--- !u!95 &3931779895068599707
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6647001767597804294}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5f098d0cb6c39ed46ba5e064c3752900, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &6647001767910862551
 GameObject:
   m_ObjectHideFlags: 0
@@ -638,6 +661,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lightballPrefab: {fileID: 8486652362498587759, guid: 2a2743a7547c59f44822484dd649bab6, type: 3}
   dontdestroy: {fileID: 0}
+  playeranim: {fileID: 3931779895068599707}
 --- !u!95 &719031861
 Animator:
   serializedVersion: 5

@@ -12,6 +12,7 @@ public class PlayerHealth : MonoBehaviour
 	public GameObject dontdestroy;
 	private levelSystem levelsystem;
 	private int level;
+	public Animator playeranim;
 
 	public HealthBar healthBar;
 
@@ -60,6 +61,8 @@ public class PlayerHealth : MonoBehaviour
 		currentHealth -= damage;
 
 		healthBar.SetHealth(currentHealth);
+
+		playeranim.Play("Base Layer.be attack");
 	}
 
 	void Healing(int pluslife)

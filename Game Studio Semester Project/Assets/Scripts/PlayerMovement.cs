@@ -16,7 +16,7 @@ public class PlayerMovement : MonoBehaviour
     public Animator animAttack;
     public GameObject cooldown;
     private Vector3 begin;
-
+    public Animator playeranim;
     public GameObject dontdestroy;
     private levelSystem levelsystem;
 
@@ -36,6 +36,16 @@ public class PlayerMovement : MonoBehaviour
     {
         movement = new Vector3(Input.GetAxis("Horizontal"), 0, 0);
         transform.position += movement * speed * Time.deltaTime;
+
+        if (!(Input.GetAxis("Horizontal") == 0))
+        {
+            playeranim.SetBool("move", true);
+        }
+
+        if (Input.GetAxis("Horizontal") == 0)
+        {
+            playeranim.SetBool("move", false);
+        }
 
         if (movement.x > 0)
         {
@@ -61,6 +71,7 @@ public class PlayerMovement : MonoBehaviour
             rb.constraints = RigidbodyConstraints2D.FreezePosition;
             speed = 0;
             animAttack.SetBool("hide", true);
+            playeranim.SetBool("hide", true);
         }
         if (Input.GetKeyUp(KeyCode.DownArrow) || Input.GetKeyUp(KeyCode.S))
         {
@@ -69,6 +80,7 @@ public class PlayerMovement : MonoBehaviour
             rb.constraints = RigidbodyConstraints2D.FreezeRotation;
             speed = 5;
             animAttack.SetBool("hide", false);
+            playeranim.SetBool("hide", false);
         }
 
         if ((Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W)) && isGrounded == true)
