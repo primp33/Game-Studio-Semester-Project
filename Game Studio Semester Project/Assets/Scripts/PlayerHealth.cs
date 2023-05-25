@@ -8,7 +8,7 @@ public class PlayerHealth : MonoBehaviour
 	public int maxHealth = 100;
 	public int currentHealth;
 	public int damage = 20;
-	public int pluslife = 20;
+	//public int pluslife = 20;
 	public GameObject dontdestroy;
 	private levelSystem levelsystem;
 	private int level;
@@ -48,11 +48,11 @@ public class PlayerHealth : MonoBehaviour
 			TakeDamage(damage);
 
 		}
-		if (collision.gameObject.tag == "healingitem")
-		{
-			Healing(pluslife);
-			collision.gameObject.SetActive(false);
-		}
+		//if (collision.gameObject.tag == "healingitem")
+		//{
+		//	Healing(pluslife);
+		//	collision.gameObject.SetActive(false);
+		//}
 	}
 
 	void TakeDamage(int damage)
