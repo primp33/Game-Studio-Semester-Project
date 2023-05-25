@@ -28,6 +28,7 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         collide = GetComponent<Collider2D>();
         begin = transform.position;
+
     }
 
     // Update is called once per frame

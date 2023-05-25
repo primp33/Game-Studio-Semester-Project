@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ca80d6c9c51a0a34aadd97b051af1953
+guid: 36dc3d2f3632d084986b5c8c6bbed8f5
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -101,143 +101,26 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: state_0
+      name: hide_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 500
         height: 600
-      alignment: 9
-      pivot: {x: 0.36198667, y: 0.44413996}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 46aa9117cb070534bbbcf8a7e2fdb524
-      internalID: -1975754183
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: state_1
-      rect:
-        serializedVersion: 2
-        x: 500
-        y: 0
-        width: 500
-        height: 600
-      alignment: 9
-      pivot: {x: 0.35804418, y: 0.46056792}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7f53a59d823c7be479f4b2c5f7109de5
-      internalID: 467672559
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: state_2
-      rect:
-        serializedVersion: 2
-        x: 1000
-        y: 0
-        width: 500
-        height: 600
-      alignment: 9
-      pivot: {x: 0.3659309, y: 0.46714005}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1bc573b17acc1f042a61df6bb58679e9
-      internalID: 1349253803
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: state_3
-      rect:
-        serializedVersion: 2
-        x: 1500
-        y: 0
-        width: 500
-        height: 600
-      alignment: 9
-      pivot: {x: 0.3659309, y: 0.46713993}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cda4fdaf1a10c4d4bab4160ed23ee8a7
-      internalID: -643073737
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: state_4
-      rect:
-        serializedVersion: 2
-        x: 2000
-        y: 0
-        width: 500
-        height: 600
-      alignment: 9
-      pivot: {x: 0.35804445, y: 0.46713993}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bb76213ad83a04249b8e87186a8e0ce3
-      internalID: -844568079
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: state_5
-      rect:
-        serializedVersion: 2
-        x: 2500
-        y: 0
-        width: 500
-        height: 600
-      alignment: 9
-      pivot: {x: 0.36593115, y: 0.46385393}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c2f2a90ad857e354dbe88b023eb06231
-      internalID: 960247843
+      spriteID: ca93aa16949f5554cafeed57cfe8abad
+      internalID: 1287553221
       vertices: []
       indices: 
       edges: []
@@ -253,12 +136,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      state_0: -1975754183
-      state_1: 467672559
-      state_2: 1349253803
-      state_3: -643073737
-      state_4: -844568079
-      state_5: 960247843
+      hide_0: 1287553221
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
