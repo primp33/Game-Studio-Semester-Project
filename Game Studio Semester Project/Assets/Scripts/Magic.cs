@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Magic : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class Magic : MonoBehaviour
     private levelSystem levelsystem;
     public Animator playeranim;
     public int torch = 0;
+
 
     private void Start()
     {
@@ -34,7 +36,7 @@ public class Magic : MonoBehaviour
 
         if (torch == 6)
         {
-
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
 
     }
