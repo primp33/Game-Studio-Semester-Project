@@ -10456,7 +10456,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5899227797660462513, guid: 71a1211785e273c4e988dadb88a2b6ff, type: 3}
       propertyPath: m_Color.a
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5899227797660462514, guid: 71a1211785e273c4e988dadb88a2b6ff, type: 3}
       propertyPath: m_LocalScale.y
@@ -10484,7 +10484,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5899227798161995935, guid: 71a1211785e273c4e988dadb88a2b6ff, type: 3}
       propertyPath: m_Color.a
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5899227798437664056, guid: 71a1211785e273c4e988dadb88a2b6ff, type: 3}
       propertyPath: m_Name
