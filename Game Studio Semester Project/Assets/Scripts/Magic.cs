@@ -10,11 +10,12 @@ public class Magic : MonoBehaviour
     public GameObject dontdestroy;
     private levelSystem levelsystem;
     public Animator playeranim;
+    public int torch = 0;
 
     private void Start()
     {
         animator = GetComponent<Animator>();
-        dontdestroy = GameObject.Find("DontDestroy");
+        dontdestroy = GameObject.FindWithTag("DontDestroy");
         levelsystem = dontdestroy.GetComponent<levelSystem>();
     }
     void Update()
@@ -31,6 +32,11 @@ public class Magic : MonoBehaviour
             playeranim.SetBool("attack", false);
         }
 
+        if (torch == 6)
+        {
+
+        }
+
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -42,6 +48,7 @@ public class Magic : MonoBehaviour
         if (collision.gameObject.name == "torch")
         {
             collision.gameObject.transform.GetChild(0).gameObject.SetActive(true);
+            torch += 1;
         }
     }
     //void Spell()

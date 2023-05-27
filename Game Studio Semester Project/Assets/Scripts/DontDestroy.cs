@@ -45,42 +45,22 @@ public class DontDestroy : MonoBehaviour
             Destroy(this.gameObject);
         }
         slider1 = GameObject.Find("expBar");
+        if (slider1 != null)
+        {
         slider = slider1.GetComponent<Slider>();
         slider.value = currentXp / requiredXp;
         //UpdateXpUI();
         //if (Input.GetKeyDown(KeyCode.Equals))
         //    GainExperienceFlatRate(20);
+        }
         if (currentXp >= requiredXp)
             LevelUp();
     }
 
-    //public void UpdateXpUI()
-    //{
-    //    float xpfraction = currentXp / requiredXp;
-    //    float FXP = frontXpBar.fillAmount; 
-    //    if (FXP < xpfraction)
-    //    {
-    //        delayTimer += Time.deltaTime;
-    //        backXpBar.fillAmount = xpfraction;
-    //        if (delayTimer > 3)
-    //        {
-    //            lerpTimer += Time.deltaTime;
-    //            float percentComplete = lerpTimer / 4;
-    //            frontXpBar.fillAmount = Mathf.Lerp(FXP, backXpBar.fillAmount, percentComplete);
-    //        }
-    //    }
-    //}
-    //public void GainExperienceFlatRate(float xpGained)
-    //{
-    //    currentXp += xpGained;
-    //    lerpTimer = 0f;
-    //}
     public void LevelUp()
     {
         currentXp = Mathf.RoundToInt(currentXp - requiredXp);
         level++;
-        //frontXpBar.fillAmount = 0f;
-        //backXpBar.fillAmount = 0f;
         requiredXp += 200;
     }
 }

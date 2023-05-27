@@ -36,6 +36,7 @@ public class timer : MonoBehaviour
         {
             timeToDisplay = 0;
             lose.SetActive(true);
+            Time.timeScale = 0;
         }
 
         float minutes = Mathf.FloorToInt(timeToDisplay / 60);
