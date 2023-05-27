@@ -15,7 +15,7 @@ public class timer : MonoBehaviour
     // Update is called once per frame
     void Start()
     {
-        lose.SetActive.false;
+        lose.SetActive(false);
     }
     void Update()
     {
@@ -35,7 +35,7 @@ public class timer : MonoBehaviour
         if(timeToDisplay < 0)
         {
             timeToDisplay = 0;
-            lose.SetActive.true;
+            lose.SetActive(true);
         }
 
         float minutes = Mathf.FloorToInt(timeToDisplay / 60);

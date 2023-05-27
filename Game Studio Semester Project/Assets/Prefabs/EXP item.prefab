@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 7378040507771079963}
   - component: {fileID: 6472223201448547699}
   - component: {fileID: 8173365304740419640}
-  - component: {fileID: 7377752850843545578}
   m_Layer: 0
   m_Name: EXP item
   m_TagString: EXP
@@ -28,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 7934353423670120162}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 9.104356, y: 7.644896, z: 0}
-  m_LocalScale: {x: 1.1925653, y: 1.1925653, z: 1.1925653}
+  m_LocalScale: {x: 2.4891222, y: 2.4891222, z: 2.4891222}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -75,8 +74,8 @@ SpriteRenderer:
   m_SortingLayerID: -1208954795
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: -3775077053267330974, guid: e0567d9c768d4e742a73e8577166f34f, type: 3}
-  m_Color: {r: 0.08176094, g: 0.98167133, b: 1, a: 1}
+  m_Sprite: {fileID: 21300010, guid: ae3918a914038694d852d0bb81f62473, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -102,17 +101,3 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0.008222392}
   serializedVersion: 2
   m_Radius: 0.3175491
---- !u!114 &7377752850843545578
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7934353423670120162}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 49ca0141b1528514d959fefae666fca5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rotationSpeedMax: 35
-  randomize: 1

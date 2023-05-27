@@ -15,18 +15,13 @@ public class TextT1 : MonoBehaviour
     {
         text = textbox.GetComponent<TextMeshProUGUI>();
     }
-
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (player.transform.position.x > 39)
-        {
-            textbox.SetActive(false);
-        }
-        if (player.transform.position.x > 17 && player.transform.position.x < 39)
-        {
-            text.text = realtext;
-            textbox.SetActive(true);
-        }
+        text.text = realtext;
+        textbox.SetActive(true);
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        textbox.SetActive(false);    
     }
 }

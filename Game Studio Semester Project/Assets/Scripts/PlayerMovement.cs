@@ -23,7 +23,7 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        dontdestroy = GameObject.Find("DontDestroy");
+        dontdestroy = GameObject.FindWithTag("DontDestroy");
         levelsystem = dontdestroy.GetComponent<levelSystem>();
         rb = GetComponent<Rigidbody2D>();
         collide = GetComponent<Collider2D>();

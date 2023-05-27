@@ -12,18 +12,19 @@ public class PlayerHealth : MonoBehaviour
 	public GameObject dontdestroy;
 	private levelSystem levelsystem;
 	private int level;
-	public Animator playeranim;
+	private Animator playeranim;
 
 	public HealthBar healthBar;
 
 	// Start is called before the first frame update
 	void Start()
 	{
-        dontdestroy = GameObject.Find("DontDestroy");
+        dontdestroy = GameObject.FindWithTag("DontDestroy");
         levelsystem = dontdestroy.GetComponent<levelSystem>();
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
 		level = levelsystem.level;
+		playeranim = GetComponent<Animator>();
 	}
 
 	// Update is called once per frame

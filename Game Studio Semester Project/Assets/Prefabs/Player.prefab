@@ -395,7 +395,6 @@ MonoBehaviour:
   maxHealth: 100
   currentHealth: 0
   damage: 5
-  pluslife: 20
   dontdestroy: {fileID: 0}
   playeranim: {fileID: 0}
   healthBar: {fileID: 0}
@@ -556,9 +555,9 @@ GameObject:
   - component: {fileID: 719031861}
   - component: {fileID: 7174654131094502848}
   - component: {fileID: 7489855708675607405}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Spirit Orb
-  m_TagString: Untagged
+  m_TagString: Attack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -10,6 +10,8 @@ TagManager:
   - key
   - Health Bar
   - EXP
+  - Attack
+  - DontDestroy
   layers:
   - Default
   - TransparentFX

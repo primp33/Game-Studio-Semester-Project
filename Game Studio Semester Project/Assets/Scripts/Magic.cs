@@ -39,6 +39,10 @@ public class Magic : MonoBehaviour
             collision.gameObject.SetActive(false);
             levelsystem.currentXp += 20;
         }
+        if (collision.gameObject.name == "torch")
+        {
+            collision.gameObject.transform.GetChild(0).gameObject.SetActive(true);
+        }
     }
     //void Spell()
     //{
