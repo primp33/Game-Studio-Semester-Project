@@ -1375,6 +1375,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 336717905}
     - target: {fileID: 1395946637541841293, guid: 2c6951e6aeb318b40a435bf5a3cb88a5, type: 3}
+      propertyPath: keytext
+      value: 
+      objectReference: {fileID: 1510936860}
+    - target: {fileID: 1395946637541841293, guid: 2c6951e6aeb318b40a435bf5a3cb88a5, type: 3}
       propertyPath: dontdestroy
       value: 
       objectReference: {fileID: 336717904}

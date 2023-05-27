@@ -7,7 +7,7 @@ using TMPro;
 
 public class timer : MonoBehaviour
 {
-    public float timeValue = 180;
+    public float timeValue = 90;
 
     public TextMeshProUGUI timeText;
     public GameObject lose;

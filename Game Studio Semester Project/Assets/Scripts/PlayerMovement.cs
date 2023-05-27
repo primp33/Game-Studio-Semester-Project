@@ -19,6 +19,7 @@ public class PlayerMovement : MonoBehaviour
     public Animator playeranim;
     public GameObject dontdestroy;
     private levelSystem levelsystem;
+    private DontDestroy dontdes;
     public GameObject keytext;
 
     // Start is called before the first frame update
@@ -26,6 +27,7 @@ public class PlayerMovement : MonoBehaviour
     {
         dontdestroy = GameObject.FindWithTag("DontDestroy");
         levelsystem = dontdestroy.GetComponent<levelSystem>();
+        dontdes = dontdestroy.GetComponent<DontDestroy>();
         rb = GetComponent<Rigidbody2D>();
         collide = GetComponent<Collider2D>();
         begin = transform.position;
@@ -98,6 +100,8 @@ public class PlayerMovement : MonoBehaviour
             isGrounded = false;
         }
         
+        if (levelsystem != null)
+        {
         //cooldown speed by level
         if (animAttack.GetCurrentAnimatorStateInfo(0).IsName("Cooldown"))
         {
@@ -106,6 +110,18 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             animAttack.speed = 1;
+        }
+        }
+        else
+        {
+            if (animAttack.GetCurrentAnimatorStateInfo(0).IsName("Cooldown"))
+            {
+                animAttack.speed = 1 + (dontdes.level / 2);
+            }
+            else
+            {
+                animAttack.speed = 1;
+            }
         }
 
     }
@@ -132,7 +148,14 @@ public class PlayerMovement : MonoBehaviour
         if (collision.gameObject.CompareTag("EXP"))
         {
             collision.gameObject.SetActive(false);
-            levelsystem.currentXp += 40;
+            if (levelsystem != null)
+            {
+                levelsystem.currentXp += 40;
+            }
+            else
+            {
+            dontdes.currentXp += 40;
+            }
         }
     }
 }
