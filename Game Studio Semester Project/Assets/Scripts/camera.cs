@@ -30,7 +30,7 @@ public class camera : MonoBehaviour
             transform.position = new Vector3(player.transform.position.x, player.transform.position.y+0.5f, transform.position.z);
         }
 
-        if ((player.transform.position.y < -20) || (player.transform.position.x < -7))
+        if ((player.transform.position.y < -20) || (player.transform.position.x < begin.x))
         {
             transform.position = begin1;
             player.transform.position = begin;

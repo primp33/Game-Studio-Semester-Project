@@ -11,7 +11,7 @@ public class PlayerHealth : MonoBehaviour
 	//public int pluslife = 20;
 	public GameObject dontdestroy;
 	private levelSystem levelsystem;
-	private int level;
+	private int level = 1;
 	private Animator playeranim;
 
 	public HealthBar healthBar;
@@ -23,17 +23,20 @@ public class PlayerHealth : MonoBehaviour
         levelsystem = dontdestroy.GetComponent<levelSystem>();
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
-		level = levelsystem.level;
 		playeranim = GetComponent<Animator>();
 	}
 
 	// Update is called once per frame
 	void Update()
 	{
+		if (levelsystem != null)
+		{
+		level = levelsystem.level;
 		if (!(level == levelsystem.level))
 		{
             level = levelsystem.level;
             maxHealth += levelsystem.level * 50;
+		}
 		}
         if (currentHealth == 0)
         {

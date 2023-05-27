@@ -19,6 +19,7 @@ public class PlayerMovement : MonoBehaviour
     public Animator playeranim;
     public GameObject dontdestroy;
     private levelSystem levelsystem;
+    public GameObject keytext;
 
     // Start is called before the first frame update
     void Start()
@@ -34,6 +35,14 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (keytext.activeInHierarchy == true)
+        {
+            Time.timeScale = 0;
+        }
+        else
+        {
+            Time.timeScale = 1;
+        }
         movement = new Vector3(Input.GetAxis("Horizontal"), 0, 0);
         transform.position += movement * speed * Time.deltaTime;
 
